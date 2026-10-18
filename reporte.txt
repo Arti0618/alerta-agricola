@@ -1,0 +1,4 @@
+Cultivo: Maiz
+Problema: Manchas amarillas en las hojas
+Ubicacion: Parcela 1
+Prioridad: Pendiente de clasificar
