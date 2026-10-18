@@ -29,3 +29,18 @@ fprintf("Cultivo: %s\n", cultivo);
 fprintf("Problema: %s\n", problema);
 fprintf("Ubicacion: %s\n", ubicacion);
 fprintf("Prioridad: %s\n", prioridad);
+
+archivo = fopen("../reportes/reporte-generado.txt", "w");
+
+if archivo == -1
+    error("No se pudo crear el archivo del reporte.");
+end
+
+fprintf(archivo, "Cultivo: %s\n", cultivo);
+fprintf(archivo, "Problema: %s\n", problema);
+fprintf(archivo, "Ubicacion: %s\n", ubicacion);
+fprintf(archivo, "Prioridad: %s\n", prioridad);
+
+fclose(archivo);
+
+fprintf("\nEl reporte se guardo correctamente.\n");

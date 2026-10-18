@@ -1,0 +1,4 @@
+Cultivo: Maiz
+Problema: Hay mucha plaga en las plantas
+Ubicacion: Parcela 2
+Prioridad: Alta
