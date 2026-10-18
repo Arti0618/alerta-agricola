@@ -1,0 +1,4 @@
+Cultivo: Tomate
+Problema: Se observaron manchas rojas en las hojas
+Ubicacion: Parcela 3
+Prioridad: Media

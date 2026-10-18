@@ -30,7 +30,19 @@ fprintf("Problema: %s\n", problema);
 fprintf("Ubicacion: %s\n", ubicacion);
 fprintf("Prioridad: %s\n", prioridad);
 
-archivo = fopen("../reportes/reporte-generado.txt", "w");
+carpetaReportes = "../reportes";
+numeroReporte = 1;
+
+nombreArchivo = sprintf("reporte-%03d.txt", numeroReporte);
+rutaArchivo = fullfile(carpetaReportes, nombreArchivo);
+
+while isfile(rutaArchivo)
+    numeroReporte = numeroReporte + 1;
+    nombreArchivo = sprintf("reporte-%03d.txt", numeroReporte);
+    rutaArchivo = fullfile(carpetaReportes, nombreArchivo);
+end
+
+archivo = fopen(rutaArchivo, "w");
 
 if archivo == -1
     error("No se pudo crear el archivo del reporte.");
@@ -43,4 +55,4 @@ fprintf(archivo, "Prioridad: %s\n", prioridad);
 
 fclose(archivo);
 
-fprintf("\nEl reporte se guardo correctamente.\n");
+fprintf("\nEl reporte se guardo correctamente en: %s\n", nombreArchivo);
